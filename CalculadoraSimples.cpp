@@ -32,9 +32,11 @@ int main ()
 	
 	else
 	if (op == '/') {
-		if (n1==0 && n2==0)
-		printf("\nVocê não pode dividir por 0.");
-		else
+		if (n1<1 || n2<1)
+		printf("\nVoce nao pode dividir por 0.");
+		return(0);
+}
+		else {
 		result = (n1/n2);
 		printf("\n O resultado e: %8.1f",result);
 	}
